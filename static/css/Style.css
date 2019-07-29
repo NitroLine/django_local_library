@@ -1,0 +1,10 @@
+#new{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	vertical-align	: middle;
+	right: 0%;
+	background-color: rgba(0, 0, 0, 0.5);
+}

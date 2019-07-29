@@ -1,0 +1,38 @@
+{% extends 'BaseIndex.html' %}
+{% block title %}
+{{block.super}}->Все книги
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="card">
+  <div class="card-header">
+    <h1>Книги, которые сейчас можно взять:</h1>
+  </div>
+    <form class="form mt-2 border border-secondary bg-light" action="{% url 'list_books'%}">
+    <input class="form-control mr-sm-2 mb-2 mt-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0 mb-2" type="submit">Поиск!</button>
+  </form>
+  <ul class="list-group list-group-flush">
+      {% for book in books%}
+    <li class="list-group-item"><div class="card">
+      {% if book.profile_image %}
+      <div class="col-md-4">
+      <img src="{{book.profile_image.url}}" class="card-img-top" alt="..." style="max-width: 300px;">
+    </div>
+      {% endif %}
+  <div class="card-body">
+    <h5 class="card-title"> {{book.title}} <br> Автор:  {{book.author}}</h5>
+      <p>Количество: {{book.count}}</p>
+    <p class="card-text"> {{book.discr}}</p>
+    <p class="card-text text-muted"> {{book.date_pub}}</p>
+  </div>
+</div>
+    </li>
+      {%endfor%}
+
+  </ul>
+</div>
+{% endblock %}

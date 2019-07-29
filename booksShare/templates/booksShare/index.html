@@ -1,0 +1,85 @@
+{% extends 'BaseIndex.html' %}
+{% block styleScript %}
+<style type="text/css">
+#butt{
+background: url(https://pp.userapi.com/c845420/v845420560/2061e/MlNJvjb2jiQ.jpg);
+background-size: 100%;
+background-position: center;
+position: relative;
+}
+#butt1{
+background: url(https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200);
+background-size: 200%;
+background-position: center;
+}
+#butt2{
+background: url(http://2017-godu.ru/wp-content/uploads/2016/09/2dd4feaa730d121736540a7b.jpg);
+background-size: 200%;
+background-position: center;
+}
+h2{
+background-color: rgba(0, 0, 100, 0.7)
+}
+#new{
+	position: absolute;
+	display: none;
+	top:0%;
+	width: 45%;
+	height: 100%;
+	background-color: rgba(0, 0, 100, 0.7);
+}
+#old{
+	position: absolute;
+	display: none;
+	top:0%;
+	right: 5%;
+	width: 45%;
+	height: 100%;
+	background-color: rgba(0, 0, 100, 0.7);
+}
+#middle_text{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+</style>
+
+{%endblock%}
+
+{% block content %}
+    <div id="butt" class="jumbotron">
+        <a id ="new" class="btn btn-dark btn-lg border border-primary rounded-pill" href="/createBook"><h1 id="middle_text" class="display-4">Новая книга!</h1></a>
+        <a id ="old" class="btn btn-dark btn-lg border border-primary rounded-pill" href="/backBook"><h1 id="middle_text" class="display-4">Вернул книгу!</h1></a>
+      <h2 class="display-1 text-light" >Я принёс книгу</h2>
+      <button id ="buttonn" class="btn btn-dark btn-lg border border-primary" role="button" >Вперёд!</button>
+
+    </div>
+    <div id="butt1" class="jumbotron ">
+      <h2 class="display-1 text-light" >Я взял книгу</h2>
+      <a class="btn btn-dark btn-lg border border-primary" href="/takebook" role="button">Вперёд!</a>
+    </div>
+    <div id="butt2" class="jumbotron">
+      <h2 class="display-1 text-light" >Список книг</h2>
+      <a class="btn btn-dark btn-lg border border-primary" href="/books" role="button">Вперёд!</a>
+    </div>
+<script type="text/javascript">
+function funct(e){
+	neww.style.display="block";
+	old.style.display="block";
+}
+function fuctE(e){
+	neww.style.display="none";
+	old.style.display="none";
+}
+    but=document.getElementById("buttonn");
+but.addEventListener("click",funct)
+neww=document.getElementById("new");
+old=document.getElementById("old");
+document.addEventListener("dblclick",fuctE);
+
+</script>
+{% endblock %}

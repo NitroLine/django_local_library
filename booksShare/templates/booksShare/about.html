@@ -1,0 +1,27 @@
+{% extends 'BaseIndex.html' %}
+{% block title %}
+{{block.super}}->О проекте
+{% endblock %}
+{% block styleScript %}
+<style type="text/css">
+#butt1{
+background: url(https://literaturno.com/wp-content/uploads/2017/06/PressFoto_10484336-XLarge-1.jpg);
+background-size: 200%;
+background-position: center;
+}
+
+</style>
+
+{%endblock%}
+{% block content %}
+
+<div  class="card bg-dark text-white">
+  <div id="butt1" >
+      <p class="card-title display-3 mt-5"style="background-color: rgba(0, 0, 100, 0.7)"> BookSharing (BookCrossing)</p>
+      <p class="card-text" style="background-color: rgba(0, 0, 100, 0.7)"> Прочитал - отдай другому!</p>
+      <p class="card-text"style="background-color: rgba(0, 0, 100, 0.7)"> Буккроcсинг (англ. BookCrossing) или книговорот — хобби и общественное движение, действующее по принципу социальных сетей и близкое к флешмобу. Человек, прочитав книгу, оставляет («освобождает») её в общественном месте (парк, кафе, поезд, библиотека, станция метро), для того, чтобы другой, случайный человек мог эту книгу найти и прочитать; тот, в свою очередь, должен повторить это же действие. Слежение за «путешествием» книги осуществляется через специальные странички в сети.</p>
+  <img src="https://i.ibb.co/HNkjdFg/Book-Share-Ico.png" class="rounded d-block" style="max-width: 400px;" alt="Тут была картинка, но она куда-то пропал :(">
+  </div>
+
+</div>
+{%endblock%}

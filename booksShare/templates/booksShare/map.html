@@ -1,0 +1,33 @@
+{% extends 'BaseIndex.html' %}
+{% block styleScript %}
+<style type="text/css">
+    #mapblock{
+        text-align: center;
+    }
+</style>
+{%endblock%}
+{% block content %}
+<div class="card" >
+  <h3 class="card-header text-center">
+    Контакты
+  </h3>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> E-Mail: minerdanil25@mail.ru</li>
+      <li class="list-group-item"><a class="badge badge-secondary" href="https://vk.com/i_dan_m">VK</a> </li>
+      <li class="list-group-item"><a class="badge badge-secondary" href="https://discord.gg/8EJV5S">Discord</a></li>
+  </ul>
+</div>
+<div class="card" >
+  <h3 class="card-header text-center">
+    Точки обмена.
+  </h3>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><div id="mapblock">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A462a83eee2ca631e65ef3804146a77ef35170f25ced8316118b02047824a78f1&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+</div>
+    </li>
+  </ul>
+</div>
+
+
+{% endblock %}
